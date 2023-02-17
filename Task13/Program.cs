@@ -7,19 +7,15 @@
 Console.Write ("Введите целое число: ");
 int number = int.Parse (Console.ReadLine()!);
 
+while (number > 999) 
+    {
+        number = number / 10;
+    }
 if (number>0 && number <100)
 {
     Console.WriteLine ($"{number} -> Третьей цифры нет");
 }
-else if (number>= 100 && number < 1000)
+if (number>= 100 && number < 1000)
 {
     Console.WriteLine ($"{number} -> {number % 10} ");  
-}
-else if (number>= 1000 && number < 10000)
-{
-    Console.WriteLine ($"{number} -> {number / 10 % 10} ");  
-}
-else if (number>= 10000 && number < 100000)
-{
-    Console.WriteLine ($"{number} -> {number / 100 % 10} ");  
 }
