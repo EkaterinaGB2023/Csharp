@@ -24,7 +24,7 @@ return result;
 }
 
 Console.WriteLine ("Введите числа через пробел: ");
-string[] str = Console.ReadLine().Split(' ');
+string[] str = Console.ReadLine()!.Split(' ');
 int [] numbers = Convertator (str);
 Console.Write($"[{String.Join(", " , numbers)}]");
 Console.Write ($"-> В данном массиве {CountPos(numbers)} положительных чисел ");
