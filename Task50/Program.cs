@@ -42,9 +42,9 @@ void PrintArray(int [,] inArray)
     }
 }
 
-bool Exist (int index1, int index2, int row, int col)
+bool Exist (int RowIndex, int ColumnIndex, int NumberOfRows, int NumberOfColumns)
 {
-    return ((index1 < row) && (index2 < col));
+    return ((RowIndex < NumberOfRows) && (ColumnIndex < NumberOfColumns));
 }
 
 int rows = Prompt ("Введите количество строк массива: ");
