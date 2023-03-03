@@ -42,9 +42,9 @@ void PrintArray(int [,] inArray)
     }
 }
 
-bool Exist (int RowIndex, int ColumnIndex, int NumberOfRows, int NumberOfColumns)
+bool Exist (int [,]array, int RowIndex, int ColumnIndex)
 {
-    return ((RowIndex < NumberOfRows) && (ColumnIndex < NumberOfColumns));
+    return ((RowIndex < array.GetLength(0)) && (ColumnIndex < array.GetLength(1)));
 }
 
 int rows = Prompt ("Введите количество строк массива: ");
@@ -53,6 +53,6 @@ int columns = Prompt("Введите количество столбцов ма�
 int [,] array = GetArray (rows, columns, 0, 100);;
 PrintArray (array);
 
-int x = Prompt ("Введите номер строки искомого элемента: ");
-int y = Prompt("Введите номер столбца искомого элемента: ");
-WriteLine(Exist(x, y, rows, columns) ? array [x,y] : "Такого элемента нет!");
+int x = Prompt ("Введите индекс строки искомого элемента: ");
+int y = Prompt("Введите индекс столбца искомого элемента: ");
+WriteLine(Exist(array, x, y) ? array [x,y] : "Такого элемента нет!");
